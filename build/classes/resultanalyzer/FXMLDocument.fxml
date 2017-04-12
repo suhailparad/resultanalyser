@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="main" prefHeight="528.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resultanalyzer.FXMLDocumentController">
+    <children>
+      <TableView fx:id="resultTable" layoutX="17.0" layoutY="151.0" prefHeight="362.0" prefWidth="616.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="151.0">
+        <columns>
+          <TableColumn fx:id="regColumn" prefWidth="103.0" text="Register No" />
+          <TableColumn fx:id="sub1Column" prefWidth="104.0" text="Subject 1" />
+            <TableColumn fx:id="sub2Column" prefWidth="104.0" text="Subject 2" />
+            <TableColumn fx:id="sub3Column" prefWidth="75.0" text="Subject 3" />
+            <TableColumn fx:id="sub4Column" prefWidth="75.0" text="Subject 4" />
+            <TableColumn fx:id="sub5Column" prefWidth="75.0" text="Subject 5" />
+            <TableColumn fx:id="sub6Column" prefWidth="75.0" text="Subject 6" />
+            <TableColumn fx:id="sub7Column" prefWidth="75.0" text="Subject 7" />
+            <TableColumn fx:id="sub8Column" prefWidth="75.0" text="Subject 8" />
+            <TableColumn fx:id="sub9Column" prefWidth="75.0" text="Subject 9" />
+            <TableColumn fx:id="sub10Column" prefWidth="75.0" text="Subject 10" />
+            <TableColumn fx:id="sub11Column" prefWidth="75.0" text="Subject 11" />
+            <TableColumn fx:id="sub12Column" prefWidth="75.0" text="Subject 12" />
+        </columns>
+      </TableView>
+      <Pane layoutY="29.0" prefHeight="68.0" prefWidth="646.0" style="-fx-background-color: #900C3F;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0">
+         <children>
+            <Label alignment="CENTER" layoutX="24.0" layoutY="19.0" text="RESULT ANALYSER" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ProgressIndicator fx:id="indicator" layoutX="18.0" layoutY="80.0" prefHeight="32.0" prefWidth="32.0" progress="0.0" />
+         </children>
+      </Pane>
+        <Label fx:id="label" layoutX="15.0" layoutY="108.0" minHeight="16" minWidth="69" />
+      <MenuBar style="-fx-background-color: transparent;">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#chooseFile" text="Load Result PDF" />
+              <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Analyse">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#analyse" text="Analyse Result" />
+                  <MenuItem mnemonicParsing="false" text="Save As Pdf" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Settings">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#test" text="Courses" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+    </children>
+</AnchorPane>
